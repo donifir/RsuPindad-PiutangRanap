@@ -10,6 +10,7 @@ use App\Http\Controllers\PengadaanAdjustController;
 use App\Http\Controllers\PengadaanController;
 use App\Http\Controllers\PiutangRanapController;
 use App\Http\Controllers\SepController;
+use App\Http\Controllers\TaksIdController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -93,3 +94,6 @@ Route::post('data-adjust/stored-data', [PengadaanAdjustController::class, 'store
 // data sep
 Route::get('get-sep/{tanggal}', [SepController::class, 'index']);
 Route::get('get-sep-2/{tanggal}', [SepController::class, 'indexsep']);
+
+// taksid
+Route::get('taks-id-all/{tanggal}', [TaksIdController::class, 'taksidall']);

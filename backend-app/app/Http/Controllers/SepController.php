@@ -22,7 +22,7 @@ class SepController extends Controller
     //
     public function indexsep(string $tanggal)
     {
-        $data = Periksa::where('tgl_registrasi',$tanggal)->where('kd_pj','BPJ')->where('kd_poli','<>','IGDK')->get();
+        $data = Periksa::where('tgl_registrasi',$tanggal)->where('status_lanjut', 'Ralan')->where('kd_pj','BPJ')->where('kd_poli','<>','IGDK')->get();
         $response = [
             'success' => true,
             'message' => 'data list nomer rawat ianp tanggal '.$tanggal,
